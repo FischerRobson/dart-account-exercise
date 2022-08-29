@@ -1,10 +1,12 @@
+import 'Client.dart';
+
 abstract class Account {
   Client _client;
-  Double _amount = 0.0;
+  double _amount = 0.0;
 
-  Account(this._client);
+  Account(this._client, this._amount);
 
-  Client get getClient{
+  Client get getClient {
     return _client;
   }
 
@@ -12,7 +14,7 @@ abstract class Account {
     _client = client;
   }
 
-  Double get getAmount{
+  double get getAmount {
     return _amount;
   }
 
@@ -21,6 +23,6 @@ abstract class Account {
   }
 
   String toString() {
-    return "Cliente: $_client.getName, saldo: $_amount"
+    return "Cliente: $_client.getName, saldo: $_amount";
   }
 }

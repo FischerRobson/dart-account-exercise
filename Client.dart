@@ -1,5 +1,5 @@
 class Client {
-  String _name;
+  String _name = "";
 
   Client(name) {
     _name = name;

@@ -1,11 +1,12 @@
 import 'Account.dart';
+import 'Client.dart';
 
 class SpecialAccount extends Account {
-  Double _taxes;
+  double _taxes = 0.0;
 
-  CommonAccount(Client client): super(client);
+  SpecialAccount(Client client, double amount) : super(client, amount);
 
-  Double get getTaxes{
+  double get getTaxes {
     return _taxes;
   }
 
@@ -14,8 +15,6 @@ class SpecialAccount extends Account {
   }
 
   void applyCorrection() {
-    _amount = _amount * (1 + _taxes);
+    amount = getAmount * (1 + _taxes);
   }
-
-
 }
