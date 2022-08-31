@@ -12,11 +12,13 @@ class Bank {
   }
 
   void transfer(Account origin, Account destiny, double value) {
+    print("");
+    print("-----------------------------------------------------");
+    print(
+        "Transferencia no valor de: $value/ ${origin.getClient.getName} -> ${destiny.getClient.getName}");
     if (value > origin.getAmount) {
       return print("Saldo insuficiente");
     }
-
-    print("Transferencia no valor de: $value");
     origin.amount = origin.getAmount - value;
     destiny.amount = destiny.getAmount + value;
     print("Saldo da origem/${origin.getClient.getName}: ${origin.getAmount}");

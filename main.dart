@@ -1,8 +1,10 @@
-import 'Account.dart';
 import 'Bank.dart';
 import 'Client.dart';
 import 'CommonAccount.dart';
 import 'SpecialAccount.dart';
+
+// Breno Marques Musetti - 104654
+// Robson Henrique Fischer - 230599
 
 void main() {
   final Bank bank = new Bank();
@@ -29,5 +31,8 @@ void main() {
   bank.addAccount(commonAccount2);
   bank.addAccount(commonAccount3);
 
-  bank.transfer(commonAccount1, commonAccount2, 2.0);
+  bank.transfer(commonAccount1, commonAccount2, 400.0);
+  bank.transfer(commonAccount1, commonAccount2, 150.0);
+  bank.transfer(specialAccount2, commonAccount1, 2000.0);
+  bank.transfer(commonAccount1, specialAccount2, 2300.0);
 }
